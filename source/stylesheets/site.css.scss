@@ -1,0 +1,142 @@
+$hero-color: #231F1F;
+$background-color: $hero-color;
+$vertical-space: 1rem;
+$font-color: #E2DDC5;
+
+@import "normalize";
+@import "prism";
+@import "project";
+
+body {
+  background: $background-color;
+  /*font-family: 'Fjalla One', sans-serif;*/
+  /*font-family: 'Anaheim', sans-serif;*/
+  /*font-family: 'Oswald', sans-serif;*/
+  /*font-family: 'Work Sans', sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  color: $font-color;
+}
+
+a {
+  color: $font-color;
+
+}
+
+.hero {
+  background: $hero-color;
+  /*font-family: 'Vollkorn', serif;*/
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  
+  .hero-content {
+    margin: auto;
+    /*max-width: 58em;*/
+    width: 667px;
+    z-index: 1;
+  }
+
+  h1 {
+    /*letter-spacing: 4px;*/
+    /*border-top: 2px solid;*/
+    /*border-bottom: 2px solid;*/
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    font-size: 5em;
+    line-height: 1;
+    padding: 0.7em 0 0.6em;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+
+  .keywords {
+    font-family: 'Oswald', sans-serif;
+    color: transparentize($hero-color, 0.1);
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.8em;
+      font-weight: 500;
+      flex-grow: 1;
+      padding: 0.5em 0;
+      text-align: center;
+    }
+  }
+
+  .ux {
+    background: #A9D7FF;
+  }
+  .web {
+    background: #3CB3B3;
+  }
+  .gfx {
+    background: pink;
+  }
+  .tb {
+    background: #FF7D66;
+  }
+  .veryday {
+    background: #FFFFA8;
+  }
+  .ii {
+    background: #66FFB5;
+  }
+
+}
+
+.container {
+  /*color: white;*/
+  padding: 3em 0 0;
+  width: 100%;
+  position: relative;
+  top: 100vh;
+  z-index: 2;
+}
+
+img {
+  width: 100%;
+}
+
+.full-width {
+  /*background-image: url(/images/projects/spotify.jpg);
+  background-size: cover; 
+  padding: $vertical-space*20 0;*/
+  text-align: center;
+  background: pink;
+
+  a {
+    color: $hero-color;
+  }
+
+  p {
+    color: $hero-color;
+    padding: 3em 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    max-width: 667px;
+    margin: auto;
+  }
+}
+
+.hej {
+  height: 0;
+  border-style: solid;
+}
+
+.top {
+  border-width: 180px 100vw 0 0;
+  border-color: $hero-color pink transparent transparent;
+}
+
+.bottom {
+  border-width: 0 0 180px 100vw;
+  border-color: transparent transparent $hero-color pink;
+}
+

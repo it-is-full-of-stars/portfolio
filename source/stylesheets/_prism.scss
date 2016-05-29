@@ -1,0 +1,62 @@
+$side: 5em;
+
+.prism-container {
+  perspective: 1600px;
+
+  .prism {
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform-origin: center;
+    text-align: center;
+    // transform: rotateY(50deg);
+  }
+
+  .prism-back {
+    position: absolute;
+    background: $hero-color;
+    height: $side;
+    width: 100%;
+  }
+  
+  .side {
+    position: absolute;
+    width: 100%;
+    height: $side;
+    transition: 1s;
+  }
+
+  .side1 {
+    background: $hero-color;
+    transition: 1s;
+  }
+  
+  .side2 {
+    background: $hero-color;
+    transform: translateY(-$side) rotateX(120deg);
+    transform-origin: bottom;
+  }
+  
+  .side3 {
+    background: darken($hero-color, 1);
+    transform: translateY($side) rotateX(-120deg);
+    transform-origin: top;
+    transition: 1s;
+  }
+}
+
+.prism-trigger {
+  margin: 6em auto;
+  text-align: center;
+}
+
+.is-active {
+  transform: rotateX(120deg) translateY(-$side);
+  
+  .side1 {
+    background: lighten($hero-color, 1);
+  }
+  
+  .side3 {
+    background: $hero-color;
+  }
+}
