@@ -1,0 +1,70 @@
+.full-width {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  background: pink;
+}
+
+.resume {
+  color: $hero-color;
+  font-family: 'Merriweather', serif;
+  text-align: left;
+  max-width: $max-width;
+  margin: auto;
+
+  @media (max-width: $breakpoint) {
+    padding: 1em;
+  }
+
+
+  a {
+    color: $hero-color;
+  }
+
+  h1 {
+    font-size: 4em;
+    font-family: 'Oswald', sans-serif;
+  }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+  }
+  h3 {
+    display: inline;
+    font-size: 1.2em;
+  }
+  h4 {
+    display: inline;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+  h5 {
+    color: transparentize($hero-color, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  p {
+    line-height: 1.6;
+    margin: 0 auto 3em;
+  }
+  .scroll-on-page-link {
+    background: $hero-color;
+    display: inline-block;
+    color: $font-color;
+    padding: 1em 2em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+  .blurb {
+    margin-top: 7em;
+    font-style: italic;
+  }
+}
+
+.top {
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 100vw;
+  border-color: transparent transparent pink $hero-color;
+}

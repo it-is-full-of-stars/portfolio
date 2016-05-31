@@ -1,3 +1,40 @@
+$(document).ready(function() {
+    $(".scroll-on-page-links").toggleClass("js-slide-up", 2000, "easeInOutExpo");
+});
+
+///////
+
+(function (jQuery) {
+  jQuery.mark = {
+    jump: function (options) {
+      var defaults = {
+        selector: 'a.scroll-on-page-link'
+      };
+      if (typeof options == 'string') {
+        defaults.selector = options;
+      }
+
+      options = jQuery.extend(defaults, options);
+      return jQuery(options.selector).click(function (e) {
+        var jumpobj = jQuery(this);
+        var target = jumpobj.attr('href');
+        var thespeed = 1000;
+        var offset = jQuery(target).offset().top;
+        jQuery('html,body').animate({
+          scrollTop: offset
+        }, thespeed, 'swing');
+        e.preventDefault();
+      });
+    }
+  };
+})(jQuery);
+
+
+jQuery(function(){  
+  jQuery.mark.jump();
+});
+
+
 ////////
 
 $(window).scroll(function(e){
@@ -8,8 +45,8 @@ function parallax(){
   var scrolled = $(window).scrollTop();
   $('.hero').css('top',-(scrolled*0.0355)+'rem');
   // $('.hero h1').css('top',-(scrolled*-0.005)+'rem');
-  $('.hero h1').css('opacity',1-(scrolled*0.00175));
-  $('.hero h2').css('opacity',1-(scrolled*0.00145));
+  $('.hero').css('opacity',1-(scrolled*0.00175));
+  // $('.hero h2').css('opacity',1-(scrolled*0.00145));
 };
 
 

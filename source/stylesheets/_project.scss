@@ -1,17 +1,18 @@
 $project-padding: 20px;
 
 .project {
-  /*border-top: 4px solid white;*/
-  padding: $vertical-space*3 0;
+  padding: $vertical-space*1.2 0;
   margin: 0;
 
   h2 {
     font-family: 'Oswald', sans-serif;
-    /*font-family: 'Anaheim', sans-serif;*/
-    /*font-family: 'Bigshot One', cursive;*/
-    font-size: 3em;
+    font-size: 2.3em;
     margin-bottom: $vertical-space;
     margin-top: 1em;
+
+    @media (max-width: $breakpoint) {
+      font-size: 1.3em;
+    }
   }
 
   h4 {
@@ -24,25 +25,32 @@ $project-padding: 20px;
   }
 
   p {
-    /*font-family: 'Work Sans', sans-serif;*/
     font-family: 'Merriweather', serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.6;
     font-weight: 300;
+
+    @media (max-width: $breakpoint) {
+      font-size: 0.9em;
+    }
   }
 
   .project-text {
-    max-width: 667px;
+    max-width: $max-width;
     margin: $vertical-space*2 auto;
     margin-bottom: $vertical-space * 3;
-    border-bottom: 2px dashed $font-color;
+    border-bottom: 2px dashed transparentize($font-color, 0.8);
     padding-bottom: 1em;
+
+    @media (max-width: $breakpoint) {
+      max-width: auto;
+      margin: $vertical-space auto;
+      padding: 1em;
+    }
   }
 
   .images {
-    /*border-radius: 5px;*/
-    max-width: 667px;
-    max-height: 400px;
+    max-width: $max-width;
     margin: auto;
     display: block;
     box-shadow: 0 0px 3px transparentize(black, 0.5);

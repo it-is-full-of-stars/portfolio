@@ -1,18 +1,17 @@
+$breakpoint: 680px;
 $hero-color: #231F1F;
 $background-color: $hero-color;
 $vertical-space: 1rem;
 $font-color: #E2DDC5;
+$max-width: 667px;
 
 @import "normalize";
 @import "prism";
 @import "project";
+@import "resume";
 
 body {
   background: $background-color;
-  /*font-family: 'Fjalla One', sans-serif;*/
-  /*font-family: 'Anaheim', sans-serif;*/
-  /*font-family: 'Oswald', sans-serif;*/
-  /*font-family: 'Work Sans', sans-serif;*/
   -webkit-font-smoothing: antialiased;
   color: $font-color;
 }
@@ -23,8 +22,6 @@ a {
 }
 
 .hero {
-  background: $hero-color;
-  /*font-family: 'Vollkorn', serif;*/
   display: flex;
   height: 100vh;
   position: fixed;
@@ -32,21 +29,22 @@ a {
   width: 100%;
   
   .hero-content {
-    margin: auto;
-    /*max-width: 58em;*/
-    width: 667px;
+    margin: 14em auto 0;
+    width: $max-width;
     z-index: 1;
   }
 
   h1 {
-    /*letter-spacing: 4px;*/
-    /*border-top: 2px solid;*/
-    /*border-bottom: 2px solid;*/
     font-family: 'Oswald', sans-serif;
     margin: 0;
+    text-align: center;
     font-size: 5em;
     line-height: 1;
     padding: 0.7em 0 0.6em;
+
+    @media (max-width: $breakpoint) {
+      font-size: 2.5em;
+    }
   }
 
   h2 {
@@ -67,6 +65,16 @@ a {
       padding: 0.5em 0;
       text-align: center;
     }
+
+    div:first-of-type {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    div:last-of-type {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
   }
 
   .ux {
@@ -78,13 +86,19 @@ a {
   .gfx {
     background: pink;
   }
-  .tb {
+  .html {
     background: #FF7D66;
   }
-  .veryday {
+  .js {
     background: #FFFFA8;
   }
-  .ii {
+  .scss {
+    background: #3CB3B3;
+  }
+  .ixd {
+    background: #66FFB5;
+  }
+  .type {
     background: #66FFB5;
   }
 
@@ -103,40 +117,27 @@ img {
   width: 100%;
 }
 
-.full-width {
-  /*background-image: url(/images/projects/spotify.jpg);
-  background-size: cover; 
-  padding: $vertical-space*20 0;*/
+.scroll-on-page-links {
+  display: block;
+  color: $font-color;
+  max-width: 99px;
+  margin: 12em auto 0;
   text-align: center;
-  background: pink;
-
-  a {
-    color: $hero-color;
-  }
-
-  p {
-    color: $hero-color;
-    padding: 3em 0;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 2em;
-    font-weight: 800;
-    max-width: 667px;
-    margin: auto;
-  }
+  border-top: 1px dashed transparentize($font-color, 0.8);
+  opacity: 0;
 }
 
-.hej {
-  height: 0;
-  border-style: solid;
+.scroll-on-page-link {
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  padding: 0.4em 0;
+  border-bottom: 1px dashed transparentize($font-color, 0.8);
 }
 
-.top {
-  border-width: 180px 100vw 0 0;
-  border-color: $hero-color pink transparent transparent;
-}
-
-.bottom {
-  border-width: 0 0 180px 100vw;
-  border-color: transparent transparent $hero-color pink;
+.js-slide-up {
+  margin-top: 8em;
+  opacity: 1;
 }
 
