@@ -444,10 +444,14 @@ textarea {
         padding: 1em; } }
   .project .images {
     max-width: 666px;
-    height: auto;
     margin: auto;
     display: block;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5); }
+    .project .images img {
+      height: 400px; }
+      @media (max-width: 680px) {
+        .project .images img {
+          height: auto; } }
   .project #slidr-div {
     height: 400px; }
 
