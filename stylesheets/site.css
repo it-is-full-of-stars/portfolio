@@ -526,12 +526,9 @@ a {
   text-align: left;
   width: 100%; }
   .hero .hero-content {
-    margin: 14em auto 0;
+    margin: 0 auto;
     width: 666px;
     z-index: 1; }
-    @media (max-width: 680px) {
-      .hero .hero-content {
-        margin: 0 auto; } }
   .hero h1 {
     font-family: 'Oswald', sans-serif;
     margin: 0;
