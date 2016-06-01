@@ -37,17 +37,17 @@ jQuery(function(){
 
 ////////
 
-$(window).scroll(function(e){
-  parallax();
-});
+// $(window).scroll(function(e){
+//   parallax();
+// });
 
-function parallax(){
-  var scrolled = $(window).scrollTop();
-  $('.hero').css('top',-(scrolled*0.0355)+'rem');
-  // $('.hero h1').css('top',-(scrolled*-0.005)+'rem');
-  $('.hero').css('opacity',1-(scrolled*0.00175));
-  // $('.hero h2').css('opacity',1-(scrolled*0.00145));
-};
+// function parallax(){
+//   var scrolled = $(window).scrollTop();
+//   $('.hero').css('top',-(scrolled*0.0355)+'rem');
+//   // $('.hero h1').css('top',-(scrolled*-0.005)+'rem');
+//   $('.hero').css('opacity',1-(scrolled*0.00175));
+//   // $('.hero h2').css('opacity',1-(scrolled*0.00145));
+// };
 
 
 

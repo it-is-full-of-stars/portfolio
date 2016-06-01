@@ -432,7 +432,7 @@ textarea {
       .project p {
         font-size: 0.9em; } }
   .project .project-text {
-    max-width: 667px;
+    max-width: 666px;
     margin: 2rem auto;
     margin-bottom: 3rem;
     border-bottom: 2px dashed rgba(226, 221, 197, 0.2);
@@ -443,12 +443,17 @@ textarea {
         margin: 1rem auto;
         padding: 1em; } }
   .project .images {
-    max-width: 667px;
+    max-width: 666px;
+    height: auto;
     margin: auto;
     display: block;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5); }
   .project #slidr-div {
     height: 400px; }
+
+@media (max-width: 680px) {
+  .slick-slider button.slick-arrow {
+    display: none !important; } }
 
 .full-width {
   text-align: center;
@@ -460,7 +465,7 @@ textarea {
   color: #231F1F;
   font-family: 'Merriweather', serif;
   text-align: left;
-  max-width: 667px;
+  max-width: 666px;
   margin: auto; }
   @media (max-width: 680px) {
     .resume {
@@ -516,12 +521,12 @@ a {
 .hero {
   display: flex;
   height: 100vh;
-  position: fixed;
+  /*position: fixed;*/
   text-align: left;
   width: 100%; }
   .hero .hero-content {
     margin: 14em auto 0;
-    width: 667px;
+    width: 666px;
     z-index: 1; }
   .hero h1 {
     font-family: 'Oswald', sans-serif;
@@ -539,7 +544,20 @@ a {
     font-family: 'Oswald', sans-serif;
     color: rgba(35, 31, 31, 0.9);
     display: flex;
-    justify-content: space-between; }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*    div:first-of-type {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+    
+        div:last-of-type {
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }*/ }
+    @media (max-width: 680px) {
+      .hero .keywords {
+        padding: 1em; } }
     .hero .keywords div {
       font-family: 'Work Sans', sans-serif;
       font-size: 0.8em;
@@ -547,12 +565,6 @@ a {
       flex-grow: 1;
       padding: 0.5em 0;
       text-align: center; }
-    .hero .keywords div:first-of-type {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px; }
-    .hero .keywords div:last-of-type {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px; }
   .hero .ux {
     background: #A9D7FF; }
   .hero .web {
@@ -575,7 +587,7 @@ a {
   padding: 3em 0 0;
   width: 100%;
   position: relative;
-  top: 100vh;
+  /*top: 100vh;*/
   z-index: 2; }
 
 img {
@@ -601,3 +613,6 @@ img {
 .js-slide-up {
   margin-top: 8em;
   opacity: 1; }
+  @media (max-width: 680px) {
+    .js-slide-up {
+      margin-top: 2em; } }
